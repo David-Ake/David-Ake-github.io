@@ -18,6 +18,23 @@ while(beginning >= limit)
     beginning++;
     beginning = beginning -2;
   }
+        function myLoop() {
+
+var start=document.getElementById("start").value;
+var end= document.getElementById("end").value;
+var jump= document.getElementById("jump").value;
+jump = Number(jump);
+start = Number(start);
+end = Number(end);
+console.log(typeof jump);
+console.log(typeof start);  
+console.log(typeof end);
+  for (var i = start; i <= end; i+=jump) {
+    
+    
+    document.write( '<p>' + i + '</p>');
+}
+}
       </script>
       <meta charset="utf-8" />
       
@@ -60,6 +77,22 @@ while(beginning >= limit)
     <a href="#C2">Jump to Chapter 2</a>
     <a href="#C1">Jump to Chapter 1</a>
     
+    
+    
+
+   
+    <p> <h4>Where to start?   </h4>
+    <input type="text" id="start" value=2 />
+    
+    <h4>Where to end?   </h4>
+    <input type="text" id="end" value=9 />
+    
+    <h4>How Much Should I Jump?   </h4>
+    <input type="text" id="jump" value=9 />
+    
+    <button onclick="myLoop()" >Get Looped!     </button>
+  
+    </p>
     
     </body>
     
